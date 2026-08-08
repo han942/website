@@ -1,0 +1,343 @@
+/* =========================================================
+   Personal homepage — layout inspired by the Minimal Mistakes
+   author-sidebar theme (left profile column + right content).
+   Supports a light/dark theme and an EN/KO language switch.
+   ========================================================= */
+
+/* ------------------------------ Palette ------------------------------- */
+:root {
+  --bg: #ffffff;
+  --text: #3d3d3d;
+  --strong: #222222;
+  --detail: #555555;
+  --muted: #7a8288;
+  --link: #2f6fab;
+  --link-hover: #1a4a75;
+  --border: rgba(130, 130, 130, 0.3);
+  --btn-hover: rgba(130, 130, 130, 0.12);
+  --masthead-h: 60px;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+          "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #15171c;
+  --text: #c9ced6;
+  --strong: #e8ebef;
+  --detail: #a8aeb8;
+  --muted: #868e99;
+  --link: #7cb0f0;
+  --link-hover: #a6cbf7;
+  --border: rgba(150, 155, 165, 0.25);
+  --btn-hover: rgba(200, 205, 215, 0.12);
+}
+
+/* --------------------------- Language switch -------------------------- */
+/* English is the default when no language has been chosen yet. */
+html[data-lang="ko"] .en { display: none; }
+html:not([data-lang="ko"]) .ko { display: none; }
+
+* { box-sizing: border-box; }
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding-top: var(--masthead-h);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+p { margin: 0 0 1em; }
+
+/* ------------------------------ Masthead ------------------------------ */
+.masthead {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 20;
+  height: var(--masthead-h);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.2s ease;
+}
+
+.masthead__inner-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+.site-title:hover { text-decoration: none; color: var(--link); }
+
+/* --------------------------- Toggle buttons --------------------------- */
+.masthead__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Language : EN | KR */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.lang-switch__sep { color: var(--border); }
+
+.lang-opt {
+  padding: 0;
+  font: inherit;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.lang-opt:hover { color: var(--link); }
+.lang-opt:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Highlight the active language (English is the default). */
+html[data-lang="ko"] .lang-opt[data-set-lang="ko"],
+html:not([data-lang="ko"]) .lang-opt[data-set-lang="en"] {
+  color: var(--strong);
+  font-weight: 700;
+  cursor: default;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.6rem;
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.icon-btn:hover { background: var(--btn-hover); }
+.icon-btn:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Show the moon in light mode, the sun in dark mode. */
+.icon-btn .icon-sun { display: none; }
+html[data-theme="dark"] .icon-btn .icon-moon { display: none; }
+html[data-theme="dark"] .icon-btn .icon-sun { display: block; }
+
+/* ------------------------------- Layout ------------------------------- */
+.page__wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.sidebar {
+  flex: 0 0 260px;
+  width: 260px;
+  font-size: 0.875rem;
+}
+
+.sidebar.sticky {
+  position: sticky;
+  top: calc(var(--masthead-h) + 2rem);
+}
+
+.page { flex: 1 1 auto; min-width: 0; }
+
+/* ------------------------------- Author ------------------------------- */
+.author__avatar { margin-bottom: 1rem; }
+
+.author__avatar img {
+  display: block;
+  width: 175px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
+.author__name {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--strong);
+}
+
+.author__bio { margin-bottom: 1rem; color: var(--muted); }
+.author__bio p { margin: 0; font-size: 0.875rem; }
+
+.author__urls {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border);
+}
+
+.author__urls li {
+  padding: 0.4rem 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.author__urls a { color: var(--text); }
+.author__urls a:hover { color: var(--link); text-decoration: none; }
+.author__urls i { color: var(--muted); margin-right: 0.35rem; }
+
+/* ------------------------------ Sections ------------------------------ */
+.section { margin-bottom: 2.5rem; }
+
+.section-title {
+  margin: 0 0 0.35em;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--strong);
+}
+
+hr.sep {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 0 0 0.9em;
+  width: 100%;
+}
+
+.page__content p { font-size: 0.95rem; }
+
+/* Entry lists (Education / Experiences / Projects) */
+.my_list {
+  margin: 0.5em 0 0;
+  padding-left: 1.15em;
+  font-size: 0.925rem;
+}
+
+.my_list > li { margin-bottom: 0.85em; }
+.my_list > li:last-child { margin-bottom: 0; }
+.my_list > li::marker { color: var(--muted); }
+
+.title { font-weight: 700; color: var(--strong); }
+
+/* Institution / company logo shown before an entry title.
+   Add .mono for single-color SVGs so they flip in dark mode. */
+.entry-logo {
+  height: 1.15em;
+  width: auto;
+  max-width: 3.5em;
+  object-fit: contain;
+  vertical-align: -0.2em;
+  margin-right: 0.45em;
+}
+
+html[data-theme="dark"] .entry-logo.mono { filter: invert(1); }
+
+.dot-sep { margin: 0 5px; color: var(--muted); }
+
+.inner-ul {
+  list-style: none;
+  margin: 0.15em 0 0;
+  padding-left: 0;
+  color: var(--detail);
+}
+
+.inner-li { margin: 0; }
+
+/* Bulleted detail list (used in Projects) */
+.inner-ul.bullets {
+  list-style: disc;
+  padding-left: 1.15em;
+}
+
+.inner-ul.bullets .inner-li { margin-bottom: 0.1em; }
+.inner-ul.bullets .inner-li::marker { color: var(--muted); }
+
+/* Role / affiliation line above the bullets */
+.role { color: var(--detail); }
+
+/* Tech-stack + link line below the bullets */
+.meta {
+  margin-top: 0.3em;
+  font-size: 0.85em;
+  color: var(--muted);
+}
+
+.stack { margin-right: 0.35em; }
+.stack::after { content: " ·"; }
+
+/* ------------------------------- Footer ------------------------------- */
+.page__footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ------------------------------ Responsive ---------------------------- */
+@media (max-width: 900px) {
+  .page__wrap {
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .sidebar {
+    flex: none;
+    width: 100%;
+    position: static;
+    text-align: center;
+  }
+
+  .sidebar.sticky { position: static; }
+
+  .author__avatar img { margin: 0 auto; width: 140px; }
+
+  .author__urls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 1.25rem;
+    border-top: 0;
+    padding-top: 0.5rem;
+  }
+
+  .author__urls li { border-bottom: 0; padding: 0.2rem 0; }
+}

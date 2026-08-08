@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==== EDIT: 사이트 제목 / 설명 ==== -->
+  <title>Anthony Han</title>
+  <meta name="description" content="Personal homepage">
+  <meta name="author" content="Anthony Han">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anthony Han">
+  <meta property="og:description" content="Personal homepage">
+  <meta property="og:url" content="https://cv.han.anthony/">
+
+  <link rel="canonical" href="https://cv.han.anthony/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"></noscript>
+
+  <!-- 저장된 테마/언어를 렌더링 전에 적용 (깜빡임 방지) -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+
+      var theme = localStorage.getItem('theme');
+      if (theme !== 'dark' && theme !== 'light') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      d.setAttribute('data-theme', theme);
+
+      // 기본값은 영어. 사용자가 고른 값만 기억한다.
+      var lang = localStorage.getItem('lang');
+      if (lang !== 'ko' && lang !== 'en') lang = 'en';
+      d.setAttribute('data-lang', lang);
+      d.lang = lang;
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- ============================= MASTHEAD ============================= -->
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <a class="site-title" href="/">Anthony Han</a>
+
+      <div class="masthead__actions">
+        <!-- 언어 전환: 현재 언어가 강조 표시됨 -->
+        <div class="lang-switch">
+          <span class="lang-switch__label">Language :</span>
+          <button class="lang-opt" type="button" data-set-lang="en">EN</button>
+          <span class="lang-switch__sep">|</span>
+          <button class="lang-opt" type="button" data-set-lang="ko">KR</button>
+        </div>
+        <!-- 다크 모드 전환 -->
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="main" class="initial-content">
+    <div class="page__wrap">
+
+      <!-- ============================ SIDEBAR ============================ -->
+      <aside class="sidebar sticky">
+        <div class="author">
+          <div class="author__avatar">
+            <!-- EDIT: 프로필 사진을 assets/images/profile.jpg 로 교체 -->
+            <img src="/assets/images/profile.svg" alt="Profile photo">
+          </div>
+
+          <div class="author__content">
+            <h3 class="author__name">Anthony Han</h3>
+            <!-- EDIT: 한 줄 소개 (직함 @ 소속) -->
+            <div class="author__bio">
+              <p>
+                <span class="en">AI Engineer Intern @ IBM | Undergraduate Student @ CAU</span
+                ><span class="ko">AI 엔지니어 인턴 @ IBM | 학부생 @ 중앙대학교</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="author__urls-wrapper">
+            <ul class="author__urls social-icons">
+              <!-- EDIT: 위치 / 링크들. 필요 없는 항목은 <li> 통째로 삭제 -->
+              <li><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i><span class="en">Atlanta, GA</span><span class="ko">미국 조지아주 애틀랜타</span></li>
+              <li><a href="mailto:hananthony1@gmail.com"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label"><span class="en">Email</span><span class="ko">이메일</span></span></a></li>
+              <li><a href="https://github.com/han942"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+              <li><a href="https://www.linkedin.com/in/anthonyseunghan/"><i class="fab fa-fw fa-linkedin-in" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+              <li><a href="/assets/files/cv.pdf"><i class="far fa-fw fa-file-alt" aria-hidden="true"></i><span class="label"><span class="en">C.V.</span><span class="ko">이력서</span></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ============================ CONTENT ============================ -->
+      <article class="page">
+        <section class="page__content">
+
+          <!-- ------------------------- ABOUT ME ------------------------- -->
+          <div id="about" class="section">
+            <h5 class="section-title"><span class="en">About Me</span><span class="ko">소개</span></h5>
+            <hr class="sep">
+            <!-- EDIT: 자기소개 문단. 현재 소속/전공 → 관심 분야 → 하고 있는 일 순서로 쓰면 자연스럽습니다. -->
+            <p class="en">
+              I am an undergraduate student at <a href="#">Chung-Ang University</a>, majoring in
+              <a href="#">Mechanical Energy Engineering</a>. My interests mainly lie in
+              Data Science, Developing AI agents, and Recommendation Systems, also finding special ways to
+              integrate those with my mechanical knowledges.
+              Previously, I'm working as an AI Engineer Intern at IBM, where I develop Multi-Scale AI agents and
+              observability solutions for .
+            </p>
+            <p class="ko">
+              저는 <a href="#">중앙대학교</a> <a href="#">기계에너지공학</a>을 전공하고 있는 학부생입니다.
+              데이터 사이언스, AI 에이전트 개발, 추천 시스템에 관심이 있으며, 이를 기계공학 지식과 접목할
+              방법을 찾는 데 특히 흥미를 느끼고 있습니다.
+              현재는 IBM에서 AI 엔지니어 인턴으로 일하며 멀티스케일 AI 에이전트와 옵저버빌리티 솔루션을
+              개발하고 있습니다.
+            </p>
+          </div>
+
+          <!-- ------------------------- EDUCATION ------------------------ -->
+          <div id="edu" class="section">
+            <h5 class="section-title"><span class="en">Education</span><span class="ko">학력</span></h5>
+            <hr class="sep">
+            <ul class="my_list">
+              <li>
+                <img class="entry-logo" src="/assets/images/logos/cau.png" alt="" aria-hidden="true">
+                <strong class="title"><span class="en">Chung-Ang University</span><span class="ko">중앙대학교</span></strong><span class="en">, Seoul, Korea</span><span class="ko">, 서울</span>
+                <span class="dot-sep">&#8226;</span><span class="en">Mar. 2021 - Present</span><span class="ko">2021. 3 - 현재</span>
+                <ul class="inner-ul">
+                  <li class="inner-li">
+                    <span class="en"><i>B.E. in Mechanical Energy Engineering</i> (GPA: 4.1 / 4.5)</span
+                    ><span class="ko"><i>기계에너지공학 학사</i> (학점: 4.1 / 4.5)</span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong class="title"><span class="en">Joong-Dong High School</span><span class="ko">중동고등학교</span></strong><span class="en">, Seoul, Korea</span><span class="ko">, 서울</span>
+                <span class="dot-sep">&#8226;</span><span class="en">Mar. 2018 - Feb. 2021</span><span class="ko">2018. 3 - 2021. 2</span>
+                <ul class="inner-ul">
+                  <li class="inner-li"><span class="en"><i>Natural Science Track</i></span><span class="ko"><i>이과 계열</i></span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ------------------------ EXPERIENCES ----------------------- -->
+          <div id="exp" class="section">
+            <h5 class="section-title"><span class="en">Experiences</span><span class="ko">경력</span></h5>
+            <hr class="sep">
+            <ul class="my_list">
+              <li>
+                <!-- 로고: assets/images/logos/ 에 파일을 넣고 src만 바꾸면 됩니다.
+                     ibm.svg 처럼 currentColor SVG는 .mono 를 붙이면 다크 모드에서 색이 반전됩니다. -->
+                <img class="entry-logo mono" src="/assets/images/logos/ibm.svg" alt="" aria-hidden="true">
+                <strong class="title"><span class="en">Company / Lab Name</span><span class="ko">회사 / 연구실 이름</span></strong><span class="en">, Seoul, Korea</span><span class="ko">, 서울</span>
+                <span class="dot-sep">&#8226;</span><span class="en">Jun. 2025 - Present</span><span class="ko">2025. 6 - 현재</span>
+                <ul class="inner-ul">
+                  <li class="inner-li">
+                    <span class="en"><i>Research Intern, Team Name</i> (Advisor: <a href="#">Prof. Name</a>)</span
+                    ><span class="ko"><i>연구 인턴, 팀 이름</i> (지도: <a href="#">교수님 성함</a>)</span>
+                  </li>
+                  <li class="inner-li">
+                    <span class="en">One line describing what you did or achieved.</span
+                    ><span class="ko">한 줄로 담당 업무나 성과를 적습니다.</span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong class="title"><span class="en">Organization Name</span><span class="ko">조직 이름</span></strong><span class="en">, Remote</span><span class="ko">, 원격</span>
+                <span class="dot-sep">&#8226;</span><span class="en">Mar. 2024 - May 2025</span><span class="ko">2024. 3 - 2025. 5</span>
+                <ul class="inner-ul">
+                  <li class="inner-li"><span class="en"><i>Position Title</i></span><span class="ko"><i>직함</i></span></li>
+                  <li class="inner-li">
+                    <span class="en">One line describing what you did or achieved.</span
+                    ><span class="ko">한 줄로 담당 업무나 성과를 적습니다.</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ------------------------- PROJECTS ------------------------- -->
+          <div id="projects" class="section">
+            <h5 class="section-title"><span class="en">Projects</span><span class="ko">프로젝트</span></h5>
+            <hr class="sep">
+            <ul class="my_list">
+              <li>
+                <strong class="title">
+                  <span class="en">Text-Embedded Hybrid Recommendation Model for Korean Restaurants</span
+                  ><span class="ko">리뷰 텍스트를 결합한 한국 음식점 하이브리드 추천 모델</span>
+                </strong>
+                <span class="dot-sep">&#8226;</span><span class="en">Dec. 2025 - Present</span><span class="ko">2025. 12 - 현재</span>
+                <ul class="inner-ul bullets">
+                  <li class="inner-li">
+                    <span class="en">Crawled restaurant reviews across Korea's five largest cities with Selenium, stored and queried in a local MySQL server</span
+                    ><span class="ko">국내 5대 도시 음식점 리뷰를 Selenium으로 크롤링해 로컬 MySQL 서버에 적재·조회</span>
+                  </li>
+                  <li class="inner-li">
+                    <span class="en">Implemented <a href="https://arxiv.org/pdf/1701.04783">DeepCoNN</a>'s dual CNN towers to embed user- and item-side review text</span
+                    ><span class="ko"><a href="https://arxiv.org/pdf/1701.04783">DeepCoNN</a>의 듀얼 CNN 구조를 구현해 유저·아이템 측 리뷰 텍스트를 임베딩</span>
+                  </li>
+                  <li class="inner-li">
+                    <span class="en">Fused the text embeddings into a rating-only recommender for more accurate rating prediction</span
+                    ><span class="ko">임베딩을 평점 기반 추천 모델에 결합해 평점 예측 정확도를 개선</span>
+                  </li>
+                </ul>
+                <div class="meta">
+                  <span class="stack">Python, PyTorch, Selenium, MySQL, Pandas</span>
+                  [<a href="https://github.com/han942/vscode/tree/main/projects/rating_recsys"><span class="en">Code</span><span class="ko">코드</span></a>]
+                </div>
+              </li>
+              <li>
+                <strong class="title">
+                  <span class="en">News Simplification for Youth via LLM Fine-Tuning</span
+                  ><span class="ko">LLM 파인튜닝을 활용한 청소년 대상 뉴스 쉬운 말 변환</span>
+                </strong>
+                <span class="dot-sep">&#8226;</span><span class="en">Mar. 2025 - Jul. 2025</span><span class="ko">2025. 3 - 2025. 7</span>
+                <div class="role"><i><span class="en">CUAI NLP Team 1 (4 members)</span><span class="ko">CUAI NLP 1팀 (4인)</span></i></div>
+                <ul class="inner-ul bullets">
+                  <li class="inner-li">
+                    <span class="en">Synthesized a 15,894-pair Korean parallel corpus from NIKL corpora via the GPT-4o API</span
+                    ><span class="ko">국립국어원 말뭉치와 GPT-4o API를 활용해 15,894쌍의 한국어 병렬 코퍼스 구축</span>
+                  </li>
+                  <li class="inner-li">
+                    <span class="en">Fine-tuned <a href="https://huggingface.co/google/gemma-3-1b-it">Gemma 3-1B</a> with QLoRA (4-bit NF4, LoRA r=64) for the text-style-transfer task</span
+                    ><span class="ko"><a href="https://huggingface.co/google/gemma-3-1b-it">Gemma 3-1B</a>를 QLoRA(4-bit NF4, LoRA r=64)로 파인튜닝해 문체 변환(TST) 과제에 적용</span>
+                  </li>
+                  <li class="inner-li">
+                    <span class="en">Validated that the model preserves 100% factual accuracy on 75%+ of the original data while improving readability for younger readers</span
+                    ><span class="ko">전체 데이터의 75% 이상에서 사실관계 정확도 100%를 유지하면서 어린 독자의 가독성을 개선함을 검증</span>
+                  </li>
+                </ul>
+                <div class="meta">
+                  <span class="stack">Python, PyTorch, Transformers, TRL/PEFT, OpenAI API</span>
+                  [<a href="https://github.com/han942/vscode/tree/main/projects/NLP_Newspaper_CUAI"><span class="en">Code</span><span class="ko">코드</span></a>]
+                </div>
+              </li>
+              <li>
+                <strong class="title">
+                  <span class="en">Global Supermarket Retail Analysis &amp; Business Report</span
+                  ><span class="ko">글로벌 슈퍼마켓 유통 데이터 분석 및 비즈니스 리포트</span>
+                </strong>
+                <span class="dot-sep">&#8226;</span><span class="en">Mar. 2026</span><span class="ko">2026. 3</span>
+                <ul class="inner-ul bullets">
+                  <li class="inner-li">
+                    <span class="en">Ran EDA, loss and multivariate analysis on 51,290 global retail transactions (2019–2022)</span
+                    ><span class="ko">51,290건의 글로벌 소매 거래 데이터(2019–2022)에 대해 EDA·손실·다변량 분석 수행</span>
+                  </li>
+                  <li class="inner-li">
+                    <span class="en">Developed 3 different business strategies that can overcome critical profit loss</span
+                    ><span class="ko">핵심 수익 손실을 개선할 수 있는 3가지 비즈니스 전략 도출</span>
+                  </li>
+                  <li class="inner-li">
+                    <span class="en">Normalized the data into a 5-table MySQL schema and built a dependency-free interactive dashboard</span
+                    ><span class="ko">데이터를 5개 테이블의 MySQL 정규화 스키마로 재구성하고 의존성 없는 인터랙티브 대시보드 제작</span>
+                  </li>
+                </ul>
+                <div class="meta">
+                  <span class="stack">Python, Pandas, SciPy, Seaborn, MySQL, Vanilla JS</span>
+                  [<a href="https://github.com/han942/vscode/tree/main/projects/Global_Supermarket_Analysis"><span class="en">Code</span><span class="ko">코드</span></a>]
+                  [<a href="https://github.com/han942/vscode/blob/main/projects/Global_Supermarket_Analysis/dashboard.html"><span class="en">Dashboard</span><span class="ko">대시보드</span></a>]
+                  [<a href="https://github.com/han942/vscode/blob/main/projects/Global_Supermarket_Analysis/Global_Supermarket_Analysis.pdf"><span class="en">Report</span><span class="ko">리포트</span></a>]
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <!-- ============================== FOOTER ============================== -->
+  <div id="footer" class="page__footer">
+    <footer>
+      <p class="copyright">
+        &copy; <span id="year">2026</span> Anthony Han.
+        <span class="en">Powered by GitHub Pages.</span><span class="ko">GitHub Pages로 운영합니다.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function () {
+      var d = document.documentElement;
+
+      document.getElementById('theme-toggle').addEventListener('click', function () {
+        var next = d.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        d.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+
+      Array.prototype.forEach.call(document.querySelectorAll('[data-set-lang]'), function (btn) {
+        btn.addEventListener('click', function () {
+          var next = btn.getAttribute('data-set-lang');
+          d.setAttribute('data-lang', next);
+          d.lang = next;
+          localStorage.setItem('lang', next);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
