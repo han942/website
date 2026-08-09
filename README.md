@@ -1,9 +1,6 @@
 # website
 
-Personal website — static HTML hosted on GitHub Pages (`cv.han.anthony`).
-
-Layout follows the academic-homepage format of <https://yy-ko.github.io/>:
-a sticky left profile sidebar plus a single content column with sections.
+Personal website — static HTML hosted on GitHub Pages.
 
 ## Structure
 
@@ -11,9 +8,7 @@ a sticky left profile sidebar plus a single content column with sections.
 index.html                  # 모든 내용은 여기서 수정
 assets/css/style.css        # 스타일
 assets/images/profile.svg   # 프로필 사진 자리 (실제 사진으로 교체)
-assets/images/logos/        # 학교·회사 로고 (cau.png, ibm.svg)
 assets/files/cv.pdf         # CV PDF (직접 추가)
-CNAME                       # 커스텀 도메인
 ```
 
 ## Sections (순서)

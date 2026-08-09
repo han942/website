@@ -252,19 +252,6 @@ hr.sep {
 
 .title { font-weight: 700; color: var(--strong); }
 
-/* Institution / company logo shown before an entry title.
-   Add .mono for single-color SVGs so they flip in dark mode. */
-.entry-logo {
-  height: 1.15em;
-  width: auto;
-  max-width: 3.5em;
-  object-fit: contain;
-  vertical-align: -0.2em;
-  margin-right: 0.45em;
-}
-
-html[data-theme="dark"] .entry-logo.mono { filter: invert(1); }
-
 .dot-sep { margin: 0 5px; color: var(--muted); }
 
 .inner-ul {
