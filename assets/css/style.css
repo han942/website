@@ -15,6 +15,18 @@
   --link-hover: #1a4a75;
   --border: rgba(130, 130, 130, 0.3);
   --btn-hover: rgba(130, 130, 130, 0.12);
+  /* GitHub-inspired colors for project stack labels. */
+  --stack-python: #3572a5;
+  --stack-pytorch: #ee4c2c;
+  --stack-selenium: #43b02a;
+  --stack-pandas: #6f42c1;
+  --stack-transformers: #d4a72c;
+  --stack-trl: #e36209;
+  --stack-openai: #10a37f;
+  --stack-scipy: #4d77cf;
+  --stack-seaborn: #4c72b0;
+  --stack-javascript: #c9a227;
+  --stack-db: #39ff14;
   --masthead-h: 60px;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
           "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
@@ -282,7 +294,28 @@ hr.sep {
   color: var(--muted);
 }
 
-.stack { margin-right: 0.35em; }
+.stack {
+  margin-right: 0.35em;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+}
+.stack-item { font-weight: 600; }
+.stack-python { color: var(--stack-python); }
+.stack-pytorch { color: var(--stack-pytorch); }
+.stack-selenium { color: var(--stack-selenium); }
+.stack-pandas { color: var(--stack-pandas); }
+.stack-transformers { color: var(--stack-transformers); }
+.stack-trl { color: var(--stack-trl); }
+.stack-openai { color: var(--stack-openai); }
+.stack-scipy { color: var(--stack-scipy); }
+.stack-seaborn { color: var(--stack-seaborn); }
+.stack-javascript { color: var(--stack-javascript); }
+.stack-db {
+  color: var(--stack-db);
+  text-shadow: 0 0 0.35em rgba(57, 255, 20, 0.35);
+}
 .stack::after { content: " ·"; }
 
 /* ------------------------------- Footer ------------------------------- */

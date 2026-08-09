@@ -31,9 +31,10 @@
       }
       d.setAttribute('data-theme', theme);
 
-      // 기본값은 영어. 사용자가 고른 값만 기억한다.
-      var lang = localStorage.getItem('lang');
-      if (lang !== 'ko' && lang !== 'en') lang = 'en';
+      // 첫 화면은 항상 영어로 시작한다.
+      // Always open the homepage in English. The language switch remains
+      // available for the current session.
+      var lang = 'en';
       d.setAttribute('data-lang', lang);
       d.lang = lang;
     })();
@@ -44,7 +45,7 @@
   <!-- ============================= MASTHEAD ============================= -->
   <div class="masthead">
     <div class="masthead__inner-wrap">
-      <a class="site-title" href="./">Anthony Han</a>
+      <a class="site-title" href="./"><span class="en">Anthony Han</span><span class="ko">한승원</span></a>
 
       <div class="masthead__actions">
         <!-- 언어 전환: 현재 언어가 강조 표시됨 -->
@@ -82,12 +83,12 @@
           </div>
 
           <div class="author__content">
-            <h3 class="author__name">Anthony Han</h3>
+            <h3 class="author__name"><span class="en">Anthony Han</span><span class="ko">한승원</span></h3>
             <!-- EDIT: 한 줄 소개 (직함 @ 소속) -->
             <div class="author__bio">
               <p>
-                <span class="en">AI Engineer Intern @ IBM | Undergraduate Student @ CAU</span
-                ><span class="ko">AI 엔지니어 인턴 @ IBM | 학부생 @ 중앙대학교</span>
+                <span class="en">Ex-AI Engineer Intern @ IBM | Mechanical Energy Engineering @ CAU</span
+                ><span class="ko">Ex-AI Engineer Intern @ IBM | Mechanical Energy Engineering @ CAU</span>
               </p>
             </div>
           </div>
@@ -119,15 +120,14 @@
               <a href="#">Mechanical Energy Engineering</a>. My interests mainly lie in
               Data Science, Developing AI agents, and Recommendation Systems, also finding special ways to
               integrate those with my mechanical knowledges.
-              Previously, I'm working as an AI Engineer Intern at IBM, where I develop Multi-Scale AI agents and
-              observability solutions for .
+              Previously, I've worked as an AI Engineer Intern at IBM, developed Multi-Scale AI agents and
+              AI-powered custom dashboards for clients by utilizing CI assests detected from our own observability solution (IBM Instana).
             </p>
             <p class="ko">
-              저는 <a href="#">중앙대학교</a> <a href="#">기계에너지공학</a>을 전공하고 있는 학부생입니다.
-              데이터 사이언스, AI 에이전트 개발, 추천 시스템에 관심이 있으며, 이를 기계공학 지식과 접목할
-              방법을 찾는 데 특히 흥미를 느끼고 있습니다.
-              현재는 IBM에서 AI 엔지니어 인턴으로 일하며 멀티스케일 AI 에이전트와 옵저버빌리티 솔루션을
-              개발하고 있습니다.
+              안녕하세요, 저는<a href="#">중앙대학교</a>에서<a href="#">에너지 기계공학</a>을 전공하고 있는 학부생입니다.
+              데이터 사이언스, AI 에이전트 개발, 추천 시스템 분야에 관심이 있으며, 이를 기계공학 지식과 접목할
+              방법을 찾는 데에도 관심을 가지고 있습니다.
+              이전에 IBM에서 AI 엔지니어 인턴으로 일하며 멀티스케일 AI Agent와 기업 CI 자산 정보를 활용한 AI Custom 대시보드를 개발한 경험이 있습니다. 
             </p>
           </div>
 
@@ -142,7 +142,7 @@
                 <ul class="inner-ul">
                   <li class="inner-li">
                     <span class="en"><i>B.E. in Mechanical Energy Engineering</i> (GPA: 4.1 / 4.5)</span
-                    ><span class="ko"><i>기계에너지공학 학사</i> (학점: 4.1 / 4.5)</span>
+                    ><span class="ko"><i>B.E. 에너지 시스템 공학부 발전기계 전공</i> (학점: 4.1 / 4.5)</span>
                   </li>
                 </ul>
               </li>
@@ -197,7 +197,7 @@
               <li>
                 <strong class="title">
                   <span class="en">Text-Embedded Hybrid Recommendation Model for Korean Restaurants</span
-                  ><span class="ko">리뷰 텍스트를 결합한 한국 음식점 하이브리드 추천 모델</span>
+                  ><span class="ko">한국 음식점 리뷰 텍스트 정보를 활용한 하이브리드 추천 모델 개발</span>
                 </strong>
                 <span class="dot-sep">&#8226;</span><span class="en">Dec. 2025 - Present</span><span class="ko">2025. 12 - 현재</span>
                 <ul class="inner-ul bullets">
@@ -215,7 +215,7 @@
                   </li>
                 </ul>
                 <div class="meta">
-                  <span class="stack">Python, PyTorch, Selenium, MySQL, Pandas</span>
+                  <code class="stack"><span class="stack-item stack-python">Python</span>, <span class="stack-item stack-pytorch">PyTorch</span>, <span class="stack-item stack-selenium">Selenium</span>, <span class="stack-item stack-db">MySQL</span>, <span class="stack-item stack-pandas">Pandas</span></code>
                   [<a href="https://github.com/han942/vscode/tree/main/projects/rating_recsys"><span class="en">Code</span><span class="ko">코드</span></a>]
                 </div>
               </li>
@@ -236,12 +236,12 @@
                     ><span class="ko"><a href="https://huggingface.co/google/gemma-3-1b-it">Gemma 3-1B</a>를 QLoRA(4-bit NF4, LoRA r=64)로 파인튜닝해 문체 변환(TST) 과제에 적용</span>
                   </li>
                   <li class="inner-li">
-                    <span class="en">Validated that the model preserves 100% factual accuracy on 75%+ of the original data while improving readability for younger readers</span
+                    <span class="en">Evaluated model performance having 100% factual accuracy on 75%+ of the original data while improving readability for younger readers</span
                     ><span class="ko">전체 데이터의 75% 이상에서 사실관계 정확도 100%를 유지하면서 어린 독자의 가독성을 개선함을 검증</span>
                   </li>
                 </ul>
                 <div class="meta">
-                  <span class="stack">Python, PyTorch, Transformers, TRL/PEFT, OpenAI API</span>
+                  <code class="stack"><span class="stack-item stack-python">Python</span>, <span class="stack-item stack-pytorch">PyTorch</span>, <span class="stack-item stack-transformers">Transformers</span>, <span class="stack-item stack-trl">TRL/PEFT</span>, <span class="stack-item stack-openai">OpenAI API</span></code>
                   [<a href="https://github.com/han942/vscode/tree/main/projects/NLP_Newspaper_CUAI"><span class="en">Code</span><span class="ko">코드</span></a>]
                 </div>
               </li>
@@ -261,12 +261,12 @@
                     ><span class="ko">핵심 수익 손실을 개선할 수 있는 3가지 비즈니스 전략 도출</span>
                   </li>
                   <li class="inner-li">
-                    <span class="en">Normalized the data into a 5-table MySQL schema and built a dependency-free interactive dashboard</span
+                    <span class="en">Normalized the data into a 5-table MySQL schema and built a dependency-free interactive dashboard to provide business insights</span
                     ><span class="ko">데이터를 5개 테이블의 MySQL 정규화 스키마로 재구성하고 의존성 없는 인터랙티브 대시보드 제작</span>
                   </li>
                 </ul>
                 <div class="meta">
-                  <span class="stack">Python, Pandas, SciPy, Seaborn, MySQL, Vanilla JS</span>
+                  <code class="stack"><span class="stack-item stack-python">Python</span>, <span class="stack-item stack-pandas">Pandas</span>, <span class="stack-item stack-scipy">SciPy</span>, <span class="stack-item stack-seaborn">Seaborn</span>, <span class="stack-item stack-db">MySQL</span>, <span class="stack-item stack-javascript">Vanilla JS</span></code>
                   [<a href="https://github.com/han942/vscode/tree/main/projects/Global_Supermarket_Analysis"><span class="en">Code</span><span class="ko">코드</span></a>]
                   [<a href="https://github.com/han942/vscode/blob/main/projects/Global_Supermarket_Analysis/dashboard.html"><span class="en">Dashboard</span><span class="ko">대시보드</span></a>]
                   [<a href="https://github.com/han942/vscode/blob/main/projects/Global_Supermarket_Analysis/Global_Supermarket_Analysis.pdf"><span class="en">Report</span><span class="ko">리포트</span></a>]
@@ -284,7 +284,7 @@
   <div id="footer" class="page__footer">
     <footer>
       <p class="copyright">
-        &copy; <span id="year">2026</span> Anthony Han.
+        &copy; <span id="year">2026</span> <span class="en">Anthony Han</span><span class="ko">한승원</span>.
         <span class="en">Powered by GitHub Pages.</span><span class="ko">GitHub Pages로 운영합니다.</span>
       </p>
     </footer>
@@ -307,7 +307,6 @@
           var next = btn.getAttribute('data-set-lang');
           d.setAttribute('data-lang', next);
           d.lang = next;
-          localStorage.setItem('lang', next);
         });
       });
     })();
