@@ -302,6 +302,22 @@ hr.sep {
   color: var(--muted);
 }
 
+.tech-stack {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 0.45em;
+  vertical-align: middle;
+}
+
+.tech-stack img {
+  display: block;
+  width: auto;
+  height: 20px;
+  max-width: 100%;
+}
+
 .stack {
   margin-right: 0.35em;
   color: var(--muted);

@@ -1,49 +1,21 @@
-# website
+# Anthony Han — Personal Website
 
-Personal website — static HTML hosted on GitHub Pages.
+Personal portfolio website for Anthony Han, featuring work in data science, AI agents, recommendation systems, and mechanical engineering.
 
-## Structure
+## Live Site
 
-```
-index.html                  # 모든 내용은 여기서 수정
-assets/css/style.css        # 스타일
-assets/images/profile.svg   # 프로필 사진 자리 (실제 사진으로 교체)
-assets/files/cv.pdf         # CV PDF (직접 추가)
-```
+<https://han942.github.io/website/>
 
-## Sections (순서)
+## About the Site
 
-1. **About Me** — 자기소개 문단
-2. **Education** — 학교 / 학위 / 기간
-3. **Experiences** — 회사·연구실 / 직함 / 기간
-4. **Projects** — 프로젝트 / 설명 / 링크
+The site presents:
 
-## 채워 넣을 곳
+- A short profile and academic background
+- Professional and research experience
+- Selected data science and machine learning projects
+- Codex Community Hackathon work, including Campus Mate
+- English and Korean language views
+- Shields.io technology badges for project stacks
+- Light and dark themes
 
-[index.html](index.html) 안에 `EDIT:` 주석이 달린 부분과 placeholder 텍스트를 바꾸면 됩니다.
-
-- 상단 `<title>` / `<meta>` / masthead 이름
-- 사이드바: 이름, 한 줄 소개, 위치, Email / GitHub / LinkedIn / C.V. 링크
-- 각 섹션의 항목들 — `<li>` 블록을 복사·삭제해서 개수 조절
-
-항목 하나의 형식:
-
-```html
-<li>
-  <strong class="title">기관 · 프로젝트 이름</strong>, 위치
-  <span class="dot-sep">&#8226;</span> 시작 - 종료
-  <ul class="inner-ul">
-    <li class="inner-li"><i>직함 / 학위</i> (부가 정보)</li>
-    <li class="inner-li">설명 한 줄</li>
-  </ul>
-</li>
-```
-
-프로필 사진은 `assets/images/` 에 넣고 `index.html` 의 `img src` 를 바꾸세요.
-
-## 로컬에서 확인
-
-```bash
-python -m http.server 8000
-# http://localhost:8000
-```
+The website is a lightweight static page built with semantic HTML, CSS, and vanilla JavaScript, and is hosted on GitHub Pages.
