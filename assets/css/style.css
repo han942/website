@@ -27,6 +27,13 @@
   --stack-seaborn: #4c72b0;
   --stack-javascript: #c9a227;
   --stack-db: #39ff14;
+  --stack-react: #149eca;
+  --stack-typescript: #3178c6;
+  --stack-vite: #9b66ff;
+  --stack-express: #555555;
+  --stack-postgresql: #336791;
+  --stack-supabase: #3ecf8e;
+  --stack-docker: #2496ed;
   --masthead-h: 60px;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
           "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
@@ -49,6 +56,7 @@ html[data-theme="dark"] {
 /* English is the default when no language has been chosen yet. */
 html[data-lang="ko"] .en { display: none; }
 html:not([data-lang="ko"]) .ko { display: none; }
+html:not([data-lang="ko"]) .education-high-school { display: none; }
 
 * { box-sizing: border-box; }
 
@@ -312,6 +320,13 @@ hr.sep {
 .stack-scipy { color: var(--stack-scipy); }
 .stack-seaborn { color: var(--stack-seaborn); }
 .stack-javascript { color: var(--stack-javascript); }
+.stack-react { color: var(--stack-react); }
+.stack-typescript { color: var(--stack-typescript); }
+.stack-vite { color: var(--stack-vite); }
+.stack-express { color: var(--stack-express); }
+.stack-postgresql { color: var(--stack-postgresql); }
+.stack-supabase { color: var(--stack-supabase); }
+.stack-docker { color: var(--stack-docker); }
 .stack-db {
   color: var(--stack-db);
   text-shadow: 0 0 0.35em rgba(57, 255, 20, 0.35);
