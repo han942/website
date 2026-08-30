@@ -270,6 +270,23 @@ hr.sep {
 .my_list > li:last-child { margin-bottom: 0; }
 .my_list > li::marker { color: var(--muted); }
 
+.experience-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.45rem;
+  row-gap: 0.1rem;
+}
+
+.experience-sep {
+  color: var(--muted);
+  margin: 0 0.05rem;
+}
+
+.experience-role {
+  flex-basis: 100%;
+}
+
 .title { font-weight: 700; color: var(--strong); }
 
 .dot-sep { margin: 0 5px; color: var(--muted); }
