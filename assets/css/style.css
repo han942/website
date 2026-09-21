@@ -295,6 +295,11 @@ hr.sep {
 .my_list > li { margin-bottom: 0.85em; }
 .my_list > li:last-child { margin-bottom: 0; }
 
+.no-top-level-bullets {
+  list-style: none;
+  padding-left: 0;
+}
+
 .experience-heading {
   display: flex;
   flex-wrap: wrap;
@@ -358,6 +363,34 @@ hr.sep {
   width: auto;
   height: 20px;
   max-width: 100%;
+}
+
+.gemma-badge {
+  display: inline-flex;
+  height: 20px;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 3px;
+  font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+  font-size: 11px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.gemma-badge__label,
+.gemma-badge__model {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 6px;
+}
+
+.gemma-badge__label { background: #555; }
+.gemma-badge__model { background: #007ec6; }
+
+.gemma-badge img {
+  width: 12px;
+  height: 12px;
 }
 
 .tech-stack--grouped {
