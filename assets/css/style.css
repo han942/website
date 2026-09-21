@@ -35,8 +35,10 @@
   --stack-supabase: #3ecf8e;
   --stack-docker: #2496ed;
   --masthead-h: 60px;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
-          "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+  --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+          system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+          "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", sans-serif;
 }
 
 html[data-theme="dark"] {
@@ -57,6 +59,14 @@ html[data-theme="dark"] {
 html[data-lang="ko"] .en { display: none; }
 html:not([data-lang="ko"]) .ko { display: none; }
 html:not([data-lang="ko"]) .education-high-school { display: none; }
+
+/* Korean typography refinements */
+html[data-lang="ko"],
+.ko {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  letter-spacing: -0.015em;
+}
 
 * { box-sizing: border-box; }
 
@@ -84,6 +94,8 @@ body {
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -274,14 +286,14 @@ hr.sep {
 
 /* Entry lists (Education / Experiences / Projects) */
 .my_list {
+  list-style: none;
   margin: 0.5em 0 0;
-  padding-left: 1.15em;
+  padding-left: 0;
   font-size: 0.925rem;
 }
 
 .my_list > li { margin-bottom: 0.85em; }
 .my_list > li:last-child { margin-bottom: 0; }
-.my_list > li::marker { color: var(--muted); }
 
 .experience-heading {
   display: flex;
