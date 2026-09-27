@@ -293,6 +293,8 @@ hr.sep {
 }
 
 .my_list > li { margin-bottom: 0.85em; }
+/* Projects: space between one project's badge row and the next project's title */
+#projects .my_list > li:not(:last-child) { margin-bottom: 1.8em; }
 .my_list > li:last-child { margin-bottom: 0; }
 
 .no-top-level-bullets {
@@ -365,7 +367,7 @@ hr.sep {
   max-width: 100%;
 }
 
-.gemma-badge {
+.model-badge {
   display: inline-flex;
   height: 20px;
   overflow: hidden;
@@ -377,18 +379,18 @@ hr.sep {
   white-space: nowrap;
 }
 
-.gemma-badge__label,
-.gemma-badge__model {
+.model-badge__label,
+.model-badge__model {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   padding: 0 6px;
 }
 
-.gemma-badge__label { background: #555; }
-.gemma-badge__model { background: #007ec6; }
+.model-badge__label { background: #555; }
+.model-badge__model { background: #007ec6; }
 
-.gemma-badge img {
+.model-badge img {
   width: 12px;
   height: 12px;
 }
