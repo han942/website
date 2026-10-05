@@ -220,8 +220,8 @@ stay current with emerging technologies and industry trends</span><span class="k
             <ul class="my_list no-top-level-bullets">
               <li>
                 <strong class="title">
-                  <span class="en">Building multi-stage recommendation systems fusing restaurant review data </span>
-                  <span class="ko">추천 품질 향상을 위해 텍스트 리뷰를 결합한 Multi-Stage 추천 시스템 개발</span>
+                  <span class="en">Building a multi-stage restaurant recommendation system fusing text reviews</span>
+                  <span class="ko">방문·평점 이력 기반 Multi-Stage 맛집 추천 시스템 개발</span>
                 </strong>
                 <span class="dot-sep">•</span><span class="en"><strong>Dec. 2025</strong> - Present</span><span class="ko"><strong>2025. 12</strong> - 현재</span>
                 <ul class="inner-ul bullets">
@@ -230,16 +230,16 @@ stay current with emerging technologies and industry trends</span><span class="k
                     <span class="ko"> 전국 5개 지역을 대상으로 Selenium 맛집 사이트의 자동화 크롤링을 통해 데이터를 수집하고, 이를 PostgreSQL DB에 저장하여 실 사용자 리뷰 데이터셋을 구축함</span>
                   </li>
                   <li class="inner-li">
-                    <span class="en">Designed a two-stage recommender: Stage 1 fuses popularity, item-item co-occurrence, and regional-popularity candidates via quota-based RRF (Top-100), and Stage 2 re-ranks them with LightGBM LambdaRank (Top-10)</span>
-                    <span class="ko">인기도·Item-item 동시 방문·지역 인기 후보를 quota 기반 RRF로 결합하는 후보 생성(Top-100)과 LightGBM LambdaRank 재정렬(Top-10)로 구성된 2-Stage 추천 시스템을 설계함</span>
+                    <span class="en">Built a two-stage recommender combining item-item collaborative filtering and LightGCN via Reciprocal Rank Fusion (Top-100), then re-ranking candidates with LightGBM LambdaRank using <strong>16 features</strong> to recommend 10 unvisited restaurants</span>
+                    <span class="ko">Item-item 협업 필터링과 LightGCN의 후보 순위를 RRF로 결합하고(Top-100), <strong>16개 feature</strong>를 활용한 LightGBM LambdaRank 재정렬로 미방문 식당 10개를 추천하는 2-Stage 시스템을 구현함</span>
                   </li>
                   <li class="inner-li">
-                    <span class="en">Established a leakage-free evaluation with global date-cutoff train/validation/test splits, tuning only on validation; LambdaRank improved test NDCG@10 by <strong>54%</strong> (0.0174 → 0.0268) over the candidate order, with a paired-bootstrap 95% CI above zero</span>
-                    <span class="ko">전역 날짜 기준 train/validation/test 분할로 데이터 누수를 차단하고 validation에서만 설정을 고른 뒤, test에서 재정렬 전 대비 NDCG@10을 <strong>54%</strong> 향상시킴 (0.0174 → 0.0268, paired bootstrap 95% CI &gt; 0)</span>
+                    <span class="en">Established global date-cutoff train/validation/test splits with past-only features and validation-only model selection; evaluated <strong>1,573 test users</strong>, recording candidate Recall@100 of <strong>20.16%</strong> and final NDCG@10 of <strong>0.02936</strong></span>
+                    <span class="ko">전역 날짜 기준 train/validation/test 분할, 과거 정보만 사용한 feature 생성, validation 기반 모델 선택으로 평가 체계를 구축하고, test 사용자 <strong>1,573명</strong>에서 후보 Recall@100 <strong>20.16%</strong>와 최종 NDCG@10 <strong>0.02936</strong>을 기록함</span>
                   </li>
                   <li class="inner-li">
-                    <span class="en">Ensured reproducibility with fixed data snapshots and MLflow experiment tracking, and built a Streamlit dashboard to inspect per-user recommendations and restaurant exposure</span>
-                    <span class="ko">고정 데이터 snapshot과 MLflow 실험 추적으로 재현성을 확보하고, 사용자별 추천과 식당 노출을 확인하는 Streamlit 대시보드를 구축함</span>
+                    <span class="en">Cached candidate and feature datasets by snapshot and configuration, reducing repeated data preparation from <strong>21.3 min to 7.2 sec</strong> locally; tracked experiments in MLflow and inspected recommendations in Streamlit</span>
+                    <span class="ko">Snapshot·설정별 후보와 feature 데이터를 캐싱하여 로컬 반복 실행의 데이터 준비 시간을 <strong>21.3분에서 7.2초</strong>로 단축하고, MLflow 실험 추적과 Streamlit 추천 결과 조회 기능을 구축함</span>
                   </li>
                 </ul>
                 <div class="meta">
