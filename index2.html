@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="assets/js/analytics.js"></script>
+
+  <!-- ==== EDIT: 사이트 제목 / 설명 ==== -->
+  <title>Anthony Han</title>
+  <meta name="description" content="Personal homepage">
+  <meta name="author" content="Anthony Han">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anthony Han">
+  <meta property="og:description" content="Personal homepage">
+  <meta property="og:url" content="https://han942.github.io/website/index2.html">
+
+  <link rel="canonical" href="https://han942.github.io/website/index2.html">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <link rel="stylesheet" href="assets/css/style2.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"></noscript>
+
+  <!-- 저장된 테마/언어를 렌더링 전에 적용 (깜빡임 방지) -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+
+      var theme = localStorage.getItem('theme');
+      if (theme !== 'dark' && theme !== 'light') {
+        theme = 'light';
+      }
+      d.setAttribute('data-theme', theme);
+
+      // 첫 화면은 항상 영어로 시작한다.
+      var lang = 'en';
+      d.setAttribute('data-lang', lang);
+      d.lang = lang;
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- ============================= MASTHEAD ============================= -->
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <a class="site-title" href="./index2.html"><span class="en">Anthony Han</span><span class="ko">한승원</span></a>
+
+      <!-- 모든 섹션이 한 페이지에 이어지므로, 상단 메뉴는 해당 섹션으로 스크롤한다 -->
+      <nav class="section-nav" aria-label="Section navigation">
+        <a class="section-nav__link active" href="#about"><span class="en">About Me</span><span class="ko">소개</span></a>
+        <a class="section-nav__link" href="#education"><span class="en">Education</span><span class="ko">학력</span></a>
+        <a class="section-nav__link" href="#experience"><span class="en">Experience</span><span class="ko">경력</span></a>
+        <a class="section-nav__link" href="#projects"><span class="en">Projects</span><span class="ko">프로젝트</span></a>
+        <a class="section-nav__link" href="#hackathons"><span class="en">Hackathon</span><span class="ko">해커톤</span></a>
+      </nav>
+
+      <div class="masthead__actions">
+        <div class="lang-switch">
+          <span class="lang-switch__label">Language :</span>
+          <button class="lang-opt" type="button" data-set-lang="en">EN</button>
+          <span class="lang-switch__sep">|</span>
+          <button class="lang-opt" type="button" data-set-lang="ko">KR</button>
+        </div>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" fill="currentColor"></circle>
+            <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- ------------------------- ABOUT ME ------------------------- -->
+    <section id="about" class="block">
+      <h2 class="section-title"><span class="en">About Me</span><span class="ko">소개</span></h2>
+
+      <div class="profile-section">
+        <div class="author__avatar">
+          <!-- EDIT: 프로필 사진은 assets/images/anthony_image.jpg 파일을 교체 -->
+          <img src="assets/images/anthony_image.jpg" alt="Profile photo of Anthony Han">
+        </div>
+
+        <div class="profile-info">
+          <h1 class="name"><span class="en">Anthony Han</span><span class="ko">한승원</span></h1>
+          <!-- EDIT: 한 줄 소개 (직함 @ 소속) -->
+          <p class="profile-title">
+            <span class="en">Ex-AI Engineer Intern @ IBM | Mechanical Energy Engineering @ CAU</span><span class="ko">Ex-AI Engineer Intern @ IBM | Mechanical Energy Engineering @ CAU</span>
+          </p>
+          <p class="location"><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i><span class="en">Atlanta, GA</span><span class="ko">Atlanta, GA</span></p>
+
+          <ul class="social-list">
+            <li><a class="social-link" href="mailto:hananthony1@gmail.com" aria-label="Email" title="Email"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a></li>
+            <li><a class="social-link" href="https://github.com/han942" aria-label="GitHub" title="GitHub"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a></li>
+            <li><a class="social-link" href="https://www.linkedin.com/in/anthonyseunghan/" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-fw fa-linkedin-in" aria-hidden="true"></i></a></li>
+            <li><a class="social-link" href="assets/files/cv.pdf" aria-label="Résumé" title="Résumé"><i class="far fa-fw fa-file-alt" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EDIT: 자기소개 문단. index.html 내용을 그대로 옮겼습니다. -->
+      <div class="about-text">
+        <p class="en">
+          I'm an undergraduate student at <a href="https://neweng.cau.ac.kr/index.do">Chung-Ang University</a>, majoring in
+          <a href="https://www.cau.ac.kr/cms/FR_CON/index.do?CONTENTS_NO=5&amp;MENU_ID=1030&amp;P_TAB_NO=5&amp;TAB_NO=0">Mechanical Energy Engineering</a>. My interests mainly lie in
+          Data Science, Developing AI agents, and in Recommendation Systems. I'm also finding ways to integrate those areas with my mechanical/energy engineering background.<br><br>
+          Previously, I've worked as an AI Engineer Intern at IBM, developed Multi-Scale AI agents and
+          AI-powered custom IT/SW management dashboards for clients by utilizing CI assets detected from IBM's observability solution (IBM Instana).
+        </p>
+        <p class="ko">
+          <a href="https://neweng.cau.ac.kr/index.do">중앙대학교</a>에서 <a href="https://www.cau.ac.kr/cms/FR_CON/index.do?CONTENTS_NO=5&amp;MENU_ID=1030&amp;P_TAB_NO=5&amp;TAB_NO=0">에너지시스템공학부 발전기계전공</a>을 전공함.
+          데이터 사이언스, AI 에이전트 개발, 추천 시스템 분야에 관심을 두고, 이 분야들을 기계공학 지식과 접목할
+          방법을 모색함. <br><br>
+          이전에 IBM에서 AI 엔지니어 인턴으로 일하며 사내 Multi-Scale AI Agent를 개발 및 평가하고, IBM Instana에서 감지한 CI 정보를 토대로
+          AI 기술을 활용하여 기업용 IT 자산관리 (ITAM) Custom 대시보드를 개발함.
+        </p>
+      </div>
+    </section>
+
+    <!-- ------------------------- EDUCATION ------------------------- -->
+    <!-- 한 줄(row)에 최대 2개 카드까지 배치됩니다 -->
+    <section id="education" class="block">
+      <h2 class="section-title"><span class="en">Education</span><span class="ko">학력</span></h2>
+
+      <div class="card-grid">
+        <article class="card edu-primary">
+          <div class="card__head">
+            <div class="card__identity">
+              <span class="card__logo"><img src="assets/images/logo-cau.svg" alt="Chung-Ang University logo" loading="lazy"></span>
+              <div>
+                <h3 class="card__title"><span class="en">Chung-Ang University</span><span class="ko">중앙대학교</span></h3>
+                <p class="card__sub"><span class="en">B.E. · Mechanical Energy Engineering</span><span class="ko">Bachelor of Engineering (B.E.) · 에너지시스템공학부 발전기계전공</span></p>
+              </div>
+            </div>
+            <span class="card__date"><span class="en">Mar. 2021 - Feb. 2027 (Expected)</span><span class="ko">2021. 3 - 2027. 2 (Expected)</span></span>
+          </div>
+
+          <dl class="edu-rows">
+            <div class="edu-row">
+              <dt><span class="en">Degree</span><span class="ko">학위</span></dt>
+              <dd><span class="en">Bachelor of Engineering (B.E.)</span><span class="ko">Bachelor of Engineering (B.E.)</span></dd>
+            </div>
+            <div class="edu-row">
+              <dt><span class="en">Major</span><span class="ko">전공</span></dt>
+              <dd><span class="en">Mechanical Energy Engineering</span><span class="ko">에너지시스템공학부 발전기계전공</span></dd>
+            </div>
+            <div class="edu-row">
+              <dt>GPA</dt>
+              <dd><strong>4.1 / 4.5</strong></dd>
+            </div>
+            <!-- EDIT: index.html에 수강 과목 정보가 없어 임시값을 넣었습니다. 실제 수강 과목으로 교체해 주세요. -->
+            <div class="edu-row">
+              <dt><span class="en">Coursework</span><span class="ko">수강 과목</span></dt>
+              <dd class="mock"><span class="en">Linear Algebra, Computer Programming, Data Structures, Databases, Data Processing & Analysis</span>
+                <span class="ko">&lt;mock data&gt;</span></dd>
+            </div>
+            <!-- EDIT: 실제 수상 내역으로 교체해 주세요. -->
+            <div class="edu-row">
+              <dt><span class="en">Awards</span><span class="ko">수상</span></dt>
+              <dd class="mock"><span class="en">&lt;mock data&gt;</span><span class="ko">&lt;mock data&gt;</span></dd>
+            </div>
+          </dl>
+        </article>
+
+        <!-- 고등학교 정보는 한국어 버전에서만 표시됩니다 (EN에서는 숨김) -->
+        <article class="card education-high-school">
+          <div class="card__head">
+            <div class="card__identity">
+              <span class="card__logo"><img src="assets/images/logo-joongdong.png" alt="Joong-Dong High School logo" loading="lazy"></span>
+              <div>
+                <h3 class="card__title"><span class="en">Joong-Dong High School</span><span class="ko">중동고등학교</span></h3>
+                <p class="card__sub"><span class="en">Natural Science Track</span><span class="ko">자연계열</span></p>
+              </div>
+            </div>
+            <span class="card__date"><span class="en">Mar. 2018 - Feb. 2021</span><span class="ko">2018. 3 - 2021. 2</span></span>
+          </div>
+
+          <dl class="edu-rows">
+            <div class="edu-row">
+              <dt><span class="en">Track</span><span class="ko">계열</span></dt>
+              <dd><span class="en">Natural Science</span><span class="ko">자연계</span></dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <!-- ------------------------ EXPERIENCE ------------------------ -->
+    <!-- 한 줄(row)에 최대 2개 카드까지 배치됩니다 -->
+    <section id="experience" class="block">
+      <h2 class="section-title"><span class="en">Work Experience</span><span class="ko">경력</span></h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__head">
+            <div class="card__identity">
+              <span class="card__logo"><img src="assets/images/logo-ibm.svg" alt="IBM logo" loading="lazy"></span>
+              <div>
+                <h3 class="card__title"><span class="en">IBM</span><span class="ko">IBM</span></h3>
+                <p class="card__sub">AI Engineer Intern, Client Engineering Team</p>
+                <p class="card__role"><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i>Seoul, Korea</p>
+              </div>
+            </div>
+            <span class="card__date"><span class="en">Jul. 2026 - Sep. 2026</span><span class="ko">2026. 7 - 2026. 9</span></span>
+          </div>
+
+          <ul class="experience-items">
+            <li>
+              <h4 class="experience-item__title"><span class="en">Multi-AI Agent System for Enterprise Applications</span><span class="ko">Multi-Agent 시스템</span></h4>
+              <p class="experience-item__summary">
+                <span class="en">Built RAG-powered multi-agent workflows and automated trace-based <strong>LLM-as-a-judge</strong> evaluations to standardize agent performance assessment.</span>
+                <span class="ko">RAG 기반 Multi-Agent 시스템을 구축하고, trace 정보를 활용한 <strong>LLM-as-a-judge</strong> 평가 자동화로 에이전트 성능 평가를 표준화함.</span>
+              </p>
+            </li>
+            <li>
+              <h4 class="experience-item__title"><span class="en">IT Asset Management Dashboard Development</span><span class="ko">기업용 IT 자산관리 대시보드</span></h4>
+              <p class="experience-item__summary">
+                <span class="en">Built an IBM Instana-based dashboard for <strong>2+ client PoCs</strong> and product implementations; batch API requests cut initial loading time by <strong>over 90%</strong> and asset collection time by <strong>over 40%</strong>.</span>
+                <span class="ko">IBM Instana 기반 대시보드를 구축해 <strong>2개 이상 고객사 PoC</strong>와 제품 구현으로 연결하고, 배치 API 요청으로 초기 화면 로딩을 <strong>90% 이상</strong>, 전체 자산 수집 시간을 <strong>40% 이상</strong> 단축함.</span>
+              </p>
+            </li>
+            <li>
+              <h4 class="experience-item__title"><span class="en">Technical Seminars / Conferences</span><span class="ko">Technical Seminars / Conferences</span></h4>
+              <p class="experience-item__summary">
+                <span class="en">Presented IBM software solutions to <strong>10+ client representatives</strong> at technical seminars and conferences, arranging follow-up product adoption meetings.</span>
+                <span class="ko">기술 세미나와 컨퍼런스에서 <strong>10명 이상 고객사 실무 담당자</strong>에게 IBM 소프트웨어 솔루션을 소개하고, 후속 제품 도입 미팅을 주선함.</span>
+              </p>
+              <ul class="experience-events">
+                <li>
+                  <a href="https://events.linuxfoundation.org/archive/2026/open-source-summit-korea/" target="_blank" rel="noopener noreferrer">Open Source Summit Korea 2026</a>
+                  <span class="experience-event__meta"><span class="en">Aug. 11–12, 2026 · The Linux Foundation</span><span class="ko">2026. 8. 11–12 · Linux Foundation</span></span>
+                </li>
+                <li>
+                  <a href="https://events.linuxfoundation.org/mcp-dev-summit-seoul/" target="_blank" rel="noopener noreferrer">MCP Dev Summit Seoul 2026</a>
+                  <span class="experience-event__meta"><span class="en">Aug. 13–14, 2026 · The Linux Foundation / AAIF</span><span class="ko">2026. 8. 13–14 · Linux Foundation / AAIF</span></span>
+                </li>
+                <li>
+                  <a href="https://www.ibm.com/kr-ko/think/videos" target="_blank" rel="noopener noreferrer">IBM AI Summit Korea 2026</a>
+                  <span class="experience-event__meta"><span class="en">Sep. 1, 2026 · IBM</span><span class="ko">2026. 9. 1 · IBM</span></span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <div class="card__identity">
+              <span class="card__logo"><img src="assets/images/logo-ecsl.png" alt="CAU Energy Conversion System Lab logo" loading="lazy"></span>
+              <div>
+                <h3 class="card__title"><a href="https://ecsl.cau.ac.kr/">CAU Energy Conversion System LAB (ECSL)</a></h3>
+                <p class="card__sub"><span class="en">Research Intern</span><span class="ko">Research Intern</span></p>
+                <p class="card__role"><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i>Seoul, Korea</p>
+              </div>
+            </div>
+            <span class="card__date"><span class="en">Jul. 2025 - Oct. 2025</span><span class="ko">2025. 7 - 2025. 10</span></span>
+          </div>
+
+          <ul class="experience-items">
+            <li>
+              <h4 class="experience-item__title"><span class="en">Coal-Fired Power Plant to Sustainable AI Data Centers</span><span class="ko">폐석탄화력발전소의 지속가능한 AI 데이터센터 전환</span></h4>
+              <p class="experience-item__summary">
+                <span class="en">Reviewed the technical feasibility of repurposing a retired coal-fired power plant as AI data centers and analyzed <a href="https://engineering.fb.com/2018/06/05/data-center-engineering/statepoint-liquid-cooling/">StatePoint Liquid Cooling (SPLC)</a> for energy-efficient thermal management.</span>
+                <span class="ko">폐석탄화력발전소의 AI 데이터센터 전환 사업을 기술 검토하고, <a href="https://engineering.fb.com/2018/06/05/data-center-engineering/statepoint-liquid-cooling/">StatePoint Liquid Cooling(SPLC)</a> 기반 냉각 방식을 분석해 에너지 효율적인 열 관리 설계에 기여함.</span>
+              </p>
+            </li>
+            <li>
+              <h4 class="experience-item__title"><span class="en">Academic Activities</span><span class="ko">학술 활동</span></h4>
+              <p class="experience-item__summary">
+                <span class="en">Reviewed <strong>5+ manuscripts</strong> submitted to <i>JMST</i> and attended seminars on data center cooling and future mobility energy systems.</span>
+                <span class="ko"><i>JMST</i> 투고 논문 <strong>5편 이상</strong>의 방법론과 기술적 결과를 검토하고, 데이터센터 냉각과 미래 모빌리티 에너지시스템 관련 세미나에 참여함.</span>
+              </p>
+              <ul class="experience-events">
+                <li>
+                  <a href="https://ksme.or.kr/Conference/ConferenceView.asp?AC=3&amp;CODE=C320250703&amp;sub_param=4&amp;top_param=1" target="_blank" rel="noopener noreferrer"><span class="en">3rd Integrated Workshop on Electronics Cooling &amp; Thermal Management</span><span class="ko">제3회 전자장비냉각 및 열관리 통합 워크숍</span></a>
+                  <span class="experience-event__meta"><span class="en">Aug. 11–12, 2025 · THE PLAZA Seoul</span><span class="ko">2025. 8. 11–12 · 더 플라자 서울</span></span>
+                </li>
+                <li>
+                  <a href="https://me.snu.ac.kr/%EC%84%B8%EB%AF%B8%EB%82%98-%EB%B0%8F-%ED%96%89%EC%82%AC/?mod=document&amp;uid=21283" target="_blank" rel="noopener noreferrer"><span class="en">Future Mobility Energy Systems: Performance &amp; Safety</span><span class="ko">미래 모빌리티 에너지시스템 성능 및 안전성 개선 연구</span></a>
+                  <span class="experience-event__meta"><span class="en">Oct. 22, 2025 · Seoul National University</span><span class="ko">2025. 10. 22 · 서울대학교</span></span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ------------------------- PROJECTS ------------------------- -->
+    <!-- 한 줄(row)에 최대 2개 카드까지 배치됩니다 -->
+    <section id="projects" class="block">
+      <h2 class="section-title"><span class="en">Projects</span><span class="ko">프로젝트</span></h2>
+
+      <div class="card-grid">
+        <!-- 1. Restaurant recommender -->
+        <article class="card">
+          <div class="card__head">
+            <div>
+              <h3 class="card__title"><span class="en">Multi-Stage Restaurant Recommendation System</span><span class="ko">방문·평점 이력 기반 Multi-Stage 맛집 추천 시스템</span></h3>
+            </div>
+            <span class="card__date"><span class="en">Dec. 2025 - Present</span><span class="ko">2025. 12 - 현재</span></span>
+          </div>
+          <p class="card__desc">
+            <span class="en">A two-stage recommender using <strong>90K+ interactions</strong> from <strong>5+ Korean regions</strong>, combining collaborative filtering, LightGCN, and LightGBM re-ranking to recommend 10 unvisited restaurants. Snapshot-based caching cut local data preparation from <strong>21.3 min to 7.2 sec</strong>.</span>
+            <span class="ko">전국 <strong>5개 이상 지역</strong>의 <strong>9만 건 이상 사용자–식당 상호작용</strong>을 활용해 협업 필터링·LightGCN과 LightGBM 재정렬로 미방문 식당 10곳을 추천하는 2-Stage 시스템을 구현함. Snapshot별 캐싱으로 로컬 반복 실행의 데이터 준비 시간을 <strong>21.3분에서 7.2초</strong>로 단축함.</span>
+          </p>
+          <div class="card__meta">
+            <span class="tech-stack" aria-label="Tech stack">
+              <img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white" alt="Python" loading="lazy">
+              <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&amp;logoColor=white" alt="PyTorch" loading="lazy">
+              <img src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&amp;logoColor=white" alt="PostgreSQL" loading="lazy">
+              <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&amp;logoColor=white" alt="MySQL" loading="lazy">
+              <img src="https://img.shields.io/badge/MLflow-0194E2?logo=mlflow&amp;logoColor=white" alt="MLflow" loading="lazy">
+              <img src="https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&amp;logoColor=white" alt="Streamlit" loading="lazy">
+            </span>
+            <span class="card__links">
+              <a class="project-link" href="https://github.com/han942/ai-ds-projects/tree/main/projects/rating_recsys" title="View source code on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only en">Code</span><span class="sr-only ko">코드</span>
+              </a>
+            </span>
+          </div>
+        </article>
+
+        <!-- 2. LLM personalization research -->
+        <article class="card">
+          <div class="card__head">
+            <div>
+              <h3 class="card__title"><span class="en">LLM Personalization &amp; Evaluation via Activation Steering</span><span class="ko">Activation Steering을 활용한 LLM 개인화 및 성능 평가 연구</span></h3>
+            </div>
+            <span class="card__date"><span class="en">Sep. 2026 - Present</span><span class="ko">2026. 9 - 현재</span></span>
+          </div>
+          <p class="card__desc">
+            <span class="en">Studying training-free Qwen3-0.6B personalization with ratings and surveys from <strong>1,500 PRISM users</strong>, using steering vectors across <strong>28 layers</strong> and blind pairwise LLM-as-a-judge evaluation. Exploratory runs found the survey-prompt baseline increased complete responses by <strong>13 pp</strong>; judge calibration and steering evaluation are in progress.</span>
+            <span class="ko">PRISM 사용자 <strong>1,500명</strong>의 평점·설문을 활용해 Qwen3-0.6B의 <strong>28개 레이어</strong>에 steering 벡터를 적용하는 학습 없는 개인화와 조건 비공개 LLM-as-a-judge 쌍비교 평가를 연구함. 탐색 평가에서 설문을 system prompt로 넣는 비교 방식이 완결 응답을 <strong>13%p</strong> 늘림을 확인함. 현재 judge calibration과 steering 평가를 진행함.</span>
+          </p>
+          <div class="card__meta">
+            <span class="tech-stack" aria-label="Tech stack">
+              <img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white" alt="Python" loading="lazy">
+              <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&amp;logoColor=white" alt="PyTorch" loading="lazy">
+              <span class="model-badge" aria-label="Hugging Face, Qwen3 0.6B">
+                <span class="model-badge__label">
+                  <img src="https://cdn.simpleicons.org/huggingface/FFFFFF" alt="" aria-hidden="true" loading="lazy">
+                  HuggingFace
+                </span>
+                <span class="model-badge__model">
+                  <img src="https://cdn.simpleicons.org/qwen/FFFFFF" alt="" aria-hidden="true" loading="lazy">
+                  Qwen3 0.6B
+                </span>
+              </span>
+              <img src="https://img.shields.io/badge/OpenRouter-6467F2?logo=openrouter&amp;logoColor=white" alt="OpenRouter" loading="lazy">
+              <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&amp;logoColor=black" alt="Google Colab" loading="lazy">
+            </span>
+            <span class="card__links">
+              <a class="project-link" href="https://github.com/han942/Personalized_LLM_Research/tree/llm/seungwon" title="View source code on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only en">Code</span><span class="sr-only ko">코드</span>
+              </a>
+            </span>
+          </div>
+        </article>
+
+        <!-- 3. News simplification -->
+        <article class="card">
+          <div class="card__head">
+            <div>
+              <h3 class="card__title"><span class="en">News Simplification for Youth via LLM Fine-Tuning</span><span class="ko">LLM Fine tuning을 활용한 청소년 맞춤 뉴스 번역</span></h3>
+              <p class="card__role"><i><span class="en">Project Lead</span><span class="ko">Project Lead</span></i></p>
+            </div>
+            <span class="card__date"><span class="en">Mar. 2025 - Jul. 2025</span><span class="ko">2025. 3 - 2025. 7</span></span>
+          </div>
+          <p class="card__desc">
+            <span class="en">Fine-tuned Gemma 3-1B with QLoRA on <strong>15,894 Korean text pairs</strong> synthesized from NIKL corpora using GPT-4o. Simplified news for younger readers while fully preserving the original numbers, amounts, and ratios in <strong>75%+ of samples</strong>.</span>
+            <span class="ko">국립국어원 말뭉치와 GPT-4o로 구축한 <strong>15,894쌍의 한국어 병렬 코퍼스</strong>로 Gemma 3-1B의 QLoRA Fine-tuning을 수행함. 어려운 뉴스를 청소년 눈높이로 순화하면서 <strong>75% 이상 샘플</strong>에서 원문의 숫자·금액·비율을 모두 보존함.</span>
+          </p>
+          <div class="card__meta">
+            <span class="tech-stack" aria-label="Tech stack">
+              <img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white" alt="Python" loading="lazy">
+              <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&amp;logoColor=white" alt="PyTorch" loading="lazy">
+              <span class="model-badge" aria-label="Hugging Face, Google Gemini, Gemma 3 1B">
+                <span class="model-badge__label">
+                  <img src="https://cdn.simpleicons.org/huggingface/FFFFFF" alt="" aria-hidden="true" loading="lazy">
+                  HuggingFace
+                </span>
+                <span class="model-badge__model">
+                  <img src="https://cdn.simpleicons.org/googlegemini/FFFFFF" alt="" aria-hidden="true" loading="lazy">
+                  Gemma 3 1B
+                </span>
+              </span>
+              <img src="https://img.shields.io/badge/TRL%2FPEFT-E36209?logo=huggingface&amp;logoColor=white" alt="TRL/PEFT" loading="lazy">
+            </span>
+            <span class="card__links">
+              <a class="project-link" href="https://github.com/han942/ai-ds-projects/tree/main/projects/NLP_Newspaper_CUAI" title="View source code on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only en">Code</span><span class="sr-only ko">코드</span>
+              </a>
+            </span>
+          </div>
+        </article>
+
+        <!-- 4. Hotel GEO diagnosis platform -->
+        <article class="card">
+          <div class="card__head">
+            <div>
+              <h3 class="card__title"><span class="en">URL-based AI Search Visibility (GEO) Diagnosis Platform for Hotels</span><span class="ko">URL 기반 호텔 AI 검색 노출도(GEO) 진단 플랫폼</span></h3>
+            </div>
+            <span class="card__date"><span class="en">Dec. 2025 - Mar. 2026</span><span class="ko">2025. 12 - 2026. 3</span></span>
+          </div>
+          <p class="card__desc">
+            <span class="en">Developed a URL-based GEO audit platform with Kaicore, enabling <strong>10+ prospective clients</strong> to assess hotel websites and receive automated AI-search visibility reports. Built review crawlers and modernized the agency website's UI/UX and SEO/GEO settings using MCP workflows.</span>
+            <span class="ko">(주) Kaicore와 URL 기반 GEO 진단 플랫폼을 개발해 <strong>10곳 이상 고객사</strong>의 호텔 AI 검색 노출도 분석과 핵심 개선 사항 도출을 지원함. 리뷰 크롤러를 구축하고, MCP workflow를 활용해 에이전시 웹사이트의 UI/UX와 SEO/GEO 설정을 고도화함.</span>
+          </p>
+          <div class="card__meta">
+            <span class="tech-stack tech-stack--grouped" aria-label="Tech stack">
+              <span class="tech-stack-group">
+                <span class="tech-stack-label"><span class="en">Front:</span><span class="ko">프론트:</span></span>
+                <span class="tech-stack-items">
+                  <img src="https://img.shields.io/badge/React-20232A?logo=react&amp;logoColor=61DAFB" alt="React" loading="lazy">
+                  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&amp;logoColor=white" alt="TypeScript" loading="lazy">
+                  <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&amp;logoColor=white" alt="Vite" loading="lazy">
+                  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&amp;logoColor=white" alt="Tailwind CSS" loading="lazy">
+                </span>
+              </span>
+              <span class="tech-stack-group">
+                <span class="tech-stack-label"><span class="en">Back:</span><span class="ko">백엔드:</span></span>
+                <span class="tech-stack-items">
+                  <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&amp;logoColor=white" alt="Node.js" loading="lazy">
+                  <img src="https://img.shields.io/badge/Playwright-2EAD33" alt="Playwright" loading="lazy">
+                  <img src="https://img.shields.io/badge/SQLite-003B57?logo=sqlite&amp;logoColor=white" alt="SQLite" loading="lazy">
+                  <img src="https://img.shields.io/badge/Resend-000000?logo=resend&amp;logoColor=white" alt="Resend" loading="lazy">
+                  <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&amp;logoColor=white" alt="Docker" loading="lazy">
+                </span>
+              </span>
+            </span>
+            <span class="card__links">
+              <a class="project-link" href="https://github.com/kaicore-labs/review-crawler" title="View source code on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only en">Code</span><span class="sr-only ko">코드</span>
+              </a>
+            </span>
+          </div>
+        </article>
+
+        <!-- 5. Global supermarket dashboard -->
+        <article class="card">
+          <div class="card__head">
+            <div>
+              <h3 class="card__title"><span class="en">Global Supermarket Retail Loss &amp; Business Dashboard</span><span class="ko">글로벌 슈퍼마켓 유통 데이터 손실 분석 및 비즈니스 대시보드</span></h3>
+            </div>
+            <span class="card__date"><span class="en">Mar. 2025</span><span class="ko">2025. 3</span></span>
+          </div>
+          <p class="card__desc">
+            <span class="en">EDA, loss and multivariate analysis on 51,290 global retail transactions (2019-2022), delivering three business strategies and a dependency-free interactive dashboard built on a normalized 5-table MySQL schema.</span>
+            <span class="ko">글로벌 소매 거래 51,290건(2019-2022)에 대한 EDA·손실·다변량 분석으로 3가지 비즈니스 전략을 도출하고, 5개 테이블 MySQL 정규화 스키마 기반의 의존성 없는 인터랙티브 대시보드를 제작함.</span>
+          </p>
+          <div class="card__meta">
+            <span class="tech-stack" aria-label="Tech stack">
+              <img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white" alt="Python" loading="lazy">
+              <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&amp;logoColor=white" alt="Pandas" loading="lazy">
+              <img src="https://img.shields.io/badge/SciPy-0C55A5?logo=scipy&amp;logoColor=white" alt="SciPy" loading="lazy">
+              <img src="https://img.shields.io/badge/Seaborn-4C72B0" alt="Seaborn" loading="lazy">
+              <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&amp;logoColor=white" alt="MySQL" loading="lazy">
+              <img src="https://img.shields.io/badge/Vanilla%20JS-F7DF1E?logo=javascript&amp;logoColor=black" alt="Vanilla JS" loading="lazy">
+            </span>
+            <span class="card__links">
+              <a class="project-link" href="https://github.com/han942/ai-ds-projects/tree/main/projects/Global_Supermarket_Analysis" title="View source code on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only en">Code</span><span class="sr-only ko">코드</span>
+              </a>
+              <a class="project-link" href="projects/global-supermarket/dashboard.html" target="_blank" rel="noopener" title="Open dashboard">
+                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                <span class="sr-only en">Dashboard</span><span class="sr-only ko">대시보드</span>
+              </a>
+              <a class="project-link" href="https://github.com/han942/ai-ds-projects/blob/main/projects/Global_Supermarket_Analysis/Global_Supermarket_Analysis.pdf" title="Read project report">
+                <i class="far fa-file-lines" aria-hidden="true"></i>
+                <span class="sr-only en">Report</span><span class="sr-only ko">리포트</span>
+              </a>
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ------------------------- HACKATHON ------------------------ -->
+    <!-- 한 줄(row)에 최대 2개 카드까지 배치됩니다 -->
+    <section id="hackathons" class="block">
+      <h2 class="section-title"><span class="en">Hackathon</span><span class="ko">해커톤</span></h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__head">
+            <div>
+              <h3 class="card__title"><span class="en"><a href="https://codex-community-korea.skysplit.chatgpt.site/en/hackathon/seoul-2026">Codex Community Hackathon</a> — Campus Mate</span><span class="ko"><a href="https://codex-community-korea.skysplit.chatgpt.site/en/hackathon/seoul-2026">Codex Community Hackathon</a> — Campus Mate</span></h3>
+              <p class="card__sub"><span class="en">AI-powered campus lunch pairing service</span><span class="ko">AI 기반 캠퍼스 점심 매칭 서비스</span></p>
+            </div>
+            <span class="card__date"><span class="en">Aug. 2026</span><span class="ko">2026. 8</span></span>
+          </div>
+          <p class="card__desc">
+            <span class="en">Selected as one of the <strong>Top 5</strong> services at a hackathon hosted by OpenAI. Led PRD-driven development and built Express/TypeScript matching APIs combining availability filters with interest-based ranking to connect students for lunch.</span>
+            <span class="ko">OpenAI가 주최한 해커톤에서 <strong>Top 5</strong>&nbsp;서비스로 선정됨. 팀 개발을 주도하고, 시간표·선호 기반 필터와 관심사 랭킹을 결합한 학생 매칭 API 및 자연어로 점심 제안까지 연결하는 AI 흐름을 구현함.</span>
+          </p>
+          <div class="card__meta">
+            <span class="tech-stack tech-stack--grouped" aria-label="Tech stack">
+              <span class="tech-stack-group">
+                <span class="tech-stack-label"><span class="en">Front:</span><span class="ko">프론트:</span></span>
+                <span class="tech-stack-items">
+                  <img src="https://img.shields.io/badge/React-20232A?logo=react&amp;logoColor=61DAFB" alt="React" loading="lazy">
+                  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&amp;logoColor=white" alt="TypeScript" loading="lazy">
+                  <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&amp;logoColor=white" alt="Vite" loading="lazy">
+                </span>
+              </span>
+              <span class="tech-stack-group">
+                <span class="tech-stack-label"><span class="en">Back:</span><span class="ko">백엔드:</span></span>
+                <span class="tech-stack-items">
+                  <img src="https://img.shields.io/badge/Express-000000?logo=express&amp;logoColor=white" alt="Express" loading="lazy">
+                  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&amp;logoColor=white" alt="PostgreSQL" loading="lazy">
+                  <img src="https://img.shields.io/badge/Supabase%20Auth-3ECF8E?logo=supabase&amp;logoColor=black" alt="Supabase Auth" loading="lazy">
+                  <img src="https://img.shields.io/badge/Docker%20Compose-2496ED?logo=docker&amp;logoColor=white" alt="Docker Compose" loading="lazy">
+                </span>
+              </span>
+            </span>
+            <span class="card__links">
+              <a class="project-link" href="https://campusmate.site" title="Open live demo">
+                <i class="fas fa-circle-play" aria-hidden="true"></i>
+                <span class="sr-only en">Live Demo</span><span class="sr-only ko">데모</span>
+              </a>
+              <a class="project-link" href="https://github.com/han942/codex-hackathon" title="View source code on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only en">Code</span><span class="sr-only ko">코드</span>
+              </a>
+            </span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <div>
+              <h3 class="card__title"><span class="en">Fraudulent Account Detection with Ensemble Learning</span><span class="ko">사기 계좌 탐지를 위한 AI 모델 개발</span></h3>
+              <p class="card__sub"><span class="en">Internal data competition — 1st Place (Grand Prize)</span><span class="ko">사내 데이터 경진대회 — 대상 (1등)</span></p>
+            </div>
+            <span class="card__date"><span class="en">May 2025</span><span class="ko">2025. 5</span></span>
+          </div>
+          <p class="card__desc">
+            <span class="en">Led the team to <strong>1st Place (Grand Prize)</strong> with a stacked XGBoost/CatBoost ensemble and Optuna tuning, improving <strong>Average Precision (AP) by over 20%</strong> against the baseline. Analyzed feature importance to explain model predictions and present actionable findings.</span>
+            <span class="ko">데이터 전처리부터 모델 개발·발표까지 팀을 이끌어 <strong>대상(1위)</strong>을 수상함. XGBoost·CatBoost 앙상블과 Optuna 튜닝으로 baseline 대비 <strong>Average Precision(AP)을 20% 이상</strong> 개선하고, 변수 중요도 분석으로 예측 근거를 설명함.</span>
+          </p>
+          <div class="card__meta">
+            <span class="tech-stack" aria-label="Tech stack">
+              <img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white" alt="Python" loading="lazy">
+              <img src="https://img.shields.io/badge/XGBoost-189FDD" alt="XGBoost" loading="lazy">
+              <img src="https://img.shields.io/badge/CatBoost-FFCC00" alt="CatBoost" loading="lazy">
+              <img src="https://img.shields.io/badge/Optuna-2C5BB4?logo=optuna&amp;logoColor=white" alt="Optuna" loading="lazy">
+            </span>
+            <!-- EDIT: GitHub 저장소가 있으면 아래 링크의 주석을 해제하고 URL을 채워 주세요
+            <span class="card__links">
+              <a class="project-link" href="GITHUB_URL" title="View source code on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only en">Code</span><span class="sr-only ko">코드</span>
+              </a>
+            </span>
+            -->
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================== FOOTER ============================== -->
+  <div id="footer" class="page__footer">
+    <footer>
+      <p class="copyright">
+        © <strong><span id="year">2026</span></strong> <span class="en">Anthony Han</span><span class="ko">한승원</span>.
+        <span class="en">Powered by GitHub Pages.</span><span class="ko">GitHub Pages로 운영함.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="assets/js/script2.js"></script>
+</body></html>
