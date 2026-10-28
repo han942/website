@@ -235,6 +235,8 @@ html[data-theme="dark"] .icon-btn .icon-sun { display: block; }
 .block:last-child { margin-bottom: 0; }
 
 .section-title {
+  width: fit-content;
+  max-width: 100%;
   margin: 0 0 1.6rem;
   padding-bottom: 0.55rem;
   font-size: 1.55rem;
@@ -248,7 +250,7 @@ html[data-theme="dark"] .icon-btn .icon-sun { display: block; }
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 52px;
+  width: 100%;
   height: 3px;
   border-radius: 2px;
   background: var(--accent);
@@ -295,6 +297,12 @@ html[data-theme="dark"] .icon-btn .icon-sun { display: block; }
 .location i { margin-right: 0.4rem; }
 
 .social-list { display: flex; gap: 0.6rem; }
+
+.social-link.cv-link {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
 
 .social-link {
   display: inline-flex;
@@ -393,12 +401,11 @@ html[data-theme="dark"] .icon-btn .icon-sun { display: block; }
 .card__bullets li::marker { color: var(--muted); }
 
 .card__meta {
-  margin-top: auto;
-  padding-top: 1rem;
+  margin-top: 0;
+  padding-top: 0.85rem;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.6rem;
 }
 

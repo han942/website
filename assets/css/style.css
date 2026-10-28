@@ -264,6 +264,12 @@ html[data-theme="dark"] .icon-btn .icon-sun { display: block; }
 .author__urls a:hover { color: var(--link); text-decoration: none; }
 .author__urls i { color: var(--muted); margin-right: 0.35rem; }
 
+.cv-link { font-weight: 600; }
+.cv-link .label {
+  font-size: 0.85rem;
+  letter-spacing: -0.03em;
+}
+
 /* ------------------------------ Sections ------------------------------ */
 .section { margin-bottom: 2.5rem; }
 
