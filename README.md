@@ -4,4 +4,5 @@ Abstract information about myself, just take a look on my academic & professiona
 
 ## Live pages
 
-- Website Link: <https://han942.github.io/website/>
+- Website Link (English): <https://han942.github.io/website/>
+- Korean: <https://han942.github.io/website/kr/>

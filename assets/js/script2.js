@@ -1,5 +1,5 @@
-// index2 — single-page portfolio behaviours
-// Theme toggle, EN/KO language switch, footer year, and scroll-spy
+// Single-page portfolio behaviours shared by the English and Korean pages.
+// Theme toggle, footer year, and scroll-spy
 // that highlights the active section in the top navigation.
 'use strict';
 
@@ -15,15 +15,6 @@
       try { localStorage.setItem('theme', next); } catch (e) { /* ignore */ }
     });
   }
-
-  /* ------------------------- Language switch --------------------------- */
-  Array.prototype.forEach.call(document.querySelectorAll('[data-set-lang]'), function (btn) {
-    btn.addEventListener('click', function () {
-      var next = btn.getAttribute('data-set-lang');
-      d.setAttribute('data-lang', next);
-      d.lang = next;
-    });
-  });
 
   /* ------------------------------ Footer year -------------------------- */
   var yearEl = document.getElementById('year');
