@@ -260,42 +260,52 @@
                   <span class="en">Study on LLM Personalization and Performance Evaluation via Activation Steering</span>
                   <span class="ko">Activation Steering을 활용한 LLM 개인화 및 성능에 대한 연구</span>
                 </strong>
-                <span class="dot-sep">•</span><span class="en"><strong>Sep. 2026</strong> - Present</span><span class="ko"><strong>2026. 9</strong> - 현재</span>
+                <span class="dot-sep">•</span><span class="en"><strong>Sep. 2026 - Nov. 2026</strong></span><span class="ko"><strong>2026. 9 - 2026. 11</strong></span>
                 <div class="role"><i><span class="en"></span><span class="ko"></span></i></div>
                 <ul class="inner-ul bullets">
                   <li class="inner-li">
-                    <span class="en">Investigating training-free personalization of a frozen Qwen3-0.6B by adding user-specific steering vectors to hidden states at inference, derived from human ratings and surveys of <strong>1,500</strong> PRISM users</span>
-                    <span class="ko">가중치 학습 없이, PRISM 사용자 <strong>1,500명</strong>의 평점·설문으로 만든 사용자별 방향 벡터를 추론 시 hidden state에 더해 고정된 Qwen3-0.6B의 응답을 개인화하는 방법을 연구 중</span>
+                    <span class="en">Evaluated training-free personalization of frozen <strong>Qwen3-4B</strong> and <strong>Llama-3.1-8B-Instruct</strong> by injecting user-specific steering vectors into hidden states at inference, built from ratings and surveys of <strong>1,500</strong> PRISM users</span>
+                    <span class="ko">가중치 추가 학습 없이, PRISM 사용자 <strong>1,500명</strong>의 평점·설문으로 만든 사용자별 방향 벡터를 추론 시 hidden state에 더해 고정된 <strong>Qwen3-4B</strong>와 <strong>Llama-3.1-8B-Instruct</strong>의 응답을 개인화할 수 있는지 검증함</span>
                   </li>
                   <li class="inner-li">
-                    <span class="en">Built population, cold-start (survey-weighted attribute directions), and warm-start (user history shrunk toward population) steering vectors from activations across all <strong>28</strong> layers, benchmarked against a survey-in-system-prompt baseline</span>
-                    <span class="ko"><strong>28개</strong> 레이어 전체의 활성값으로 population, cold-start(설문 가중 attribute 방향), warm-start(사용자 이력 + population 수축) steering 벡터를 구성하고, 설문을 system prompt로 넣는 방식과 비교함</span>
+                    <span class="en">Constructed population, cold-start (z-scored survey-weighted orthogonalized attribute directions, <code>zC</code>), and warm-start (history-shrunk) steering vectors, benchmarked against no-steering and survey system-prompt baselines under PRISM-matched generation settings</span>
+                    <span class="ko">PRISM 생성 조건에 맞춰 population, cold-start(설문 z-score 가중 직교 속성 방향 <code>zC</code>), warm-start(이력 수축 결합) steering 벡터를 구성하고, 기본 생성 및 설문 system prompt 기준선과 비교함</span>
                   </li>
                   <li class="inner-li">
-                    <span class="en">Built a blind pairwise LLM-as-a-judge pipeline via OpenRouter that moves on to the layer × strength grid only after judge–user agreement passes a Wilson lower-bound calibration (&gt; 0.5)</span>
-                    <span class="ko">OpenRouter 기반 LLM-as-a-judge 쌍비교 파이프라인(조건 비공개, A/B 순서 무작위)을 구축하고, judge–사용자 일치도의 Wilson 하한이 0.5를 넘을 때만 레이어 × 강도 탐색으로 넘어가도록 설계함</span>
+                    <span class="en">Pre-validated an order-swapped pairwise <strong>Jev (Perplexity Decider)</strong> judge via OpenRouter (<strong>0.729</strong> accuracy and <strong>+0.022</strong> own-profile gain on 1,724 PRISM pairs) alongside <code>all-mpnet-base-v2</code> embedding similarity and blind quality checks</span>
+                    <span class="ko">OpenRouter 기반 순서 교차 쌍비교 <strong>Jev(Perplexity Decider)</strong> judge를 사전 검증하고(PRISM 1,724쌍 정확도 <strong>0.729</strong>, 자기 정보 효과 <strong>+0.022</strong>), <code>all-mpnet-base-v2</code> 임베딩 유사도와 blind 품질 지표를 함께 평가함</span>
                   </li>
                   <li class="inner-li">
-                    <span class="en">Exploratory runs showed that a low steering strength (0.03) left outputs nearly unchanged (first-token KL ≈ 1e-5), while the survey system prompt increased complete responses by <strong>13 pp</strong>; judge calibration and dev grid evaluation are in progress</span>
-                    <span class="ko">탐색 평가에서 낮은 강도(0.03)는 출력을 거의 바꾸지 못했고(첫 토큰 KL ≈ 1e-5), 설문 system prompt는 완결 응답을 <strong>13%p</strong> 늘림을 확인함. 현재 judge calibration과 dev grid 평가를 진행 중</span>
+                    <span class="en">Survey-based steering (<code>zC</code>) reliably controlled stated preferences while preserving quality across both models (Qwen3-4B L19 <code>s=4</code>: B <strong>0.607</strong>, quality <strong>0.492</strong>; Llama-3.1-8B L12 <code>s=8</code>: B <strong>0.606</strong>, quality <strong>0.508</strong> vs. prompt quality drop to <strong>0.350</strong>), whereas revealed preference showed no gain; diagnostic ablations confirmed oracle steering works (<strong>+0.020</strong>) and traced the bottleneck to weak per-user signal in PRISM</span>
+                    <span class="ko">설문 기반 steering(<code>zC</code>)은 두 모델 모두에서 품질을 유지하며 밝힌 선호 속성을 안정적으로 제어했으나(Qwen3-4B L19 <code>s=4</code>: B <strong>0.607</strong>·품질 <strong>0.492</strong>, Llama-3.1-8B L12 <code>s=8</code>: B <strong>0.606</strong>·품질 <strong>0.508</strong> vs 프롬프트 품질 <strong>0.350</strong> 하락), 실제 선호 지표는 개선되지 않았으며 원인 진단으로 정답 방향 steering은 작동함(<strong>+0.020</strong>)과 PRISM 데이터 내 개인 신호 부족이 핵심 병목임을 확인함</span>
                   </li>
                 </ul>
                 <div class="meta">
                   <span class="tech-stack" aria-label="Tech stack">
                     <img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white" alt="Python" loading="lazy">
                     <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&amp;logoColor=white" alt="PyTorch" loading="lazy">
-                    <span class="model-badge" aria-label="Hugging Face, Qwen3 0.6B">
+                    <span class="model-badge" aria-label="Hugging Face, Qwen3 4B">
                       <span class="model-badge__label">
                         <img src="https://cdn.simpleicons.org/huggingface/FFFFFF" alt="" aria-hidden="true" loading="lazy">
                         HuggingFace
                       </span>
                       <span class="model-badge__model">
                         <img src="https://cdn.simpleicons.org/qwen/FFFFFF" alt="" aria-hidden="true" loading="lazy">
-                        Qwen3 0.6B
+                        Qwen3 4B
+                      </span>
+                    </span>
+                    <span class="model-badge" aria-label="Hugging Face, Meta, Llama 3.1 8B">
+                      <span class="model-badge__label">
+                        <img src="https://cdn.simpleicons.org/huggingface/FFFFFF" alt="" aria-hidden="true" loading="lazy">
+                        HuggingFace
+                      </span>
+                      <span class="model-badge__model">
+                        <img src="https://cdn.simpleicons.org/meta/FFFFFF" alt="" aria-hidden="true" loading="lazy">
+                        Llama 3.1 8B
                       </span>
                     </span>
                     <img src="https://img.shields.io/badge/OpenRouter-6467F2?logo=openrouter&amp;logoColor=white" alt="OpenRouter" loading="lazy">
-                    <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&amp;logoColor=black" alt="Google Colab" loading="lazy">
+                    <img src="https://img.shields.io/badge/Perplexity%20Jev-1FB8CD?logo=perplexity&amp;logoColor=white" alt="Perplexity Jev" loading="lazy">
                   </span>
                 </div>
               </li>

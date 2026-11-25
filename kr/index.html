@@ -127,21 +127,13 @@
             <div class="card__identity">
               <div>
                 <h3 class="card__title"><span class="ko">중앙대학교</span></h3>
-                <p class="card__sub"><span class="ko">Bachelor of Engineering (B.E.) · 에너지시스템공학부 발전기계전공</span></p>
+                <p class="card__sub"><span class="ko">Bachelor of Engineering (B.E.) <br>에너지시스템공학부 발전기계 전공</span></p>
               </div>
             </div>
             <span class="card__date"><span class="ko">2021. 3 - 2027. 2 (Expected)</span></span>
           </div>
 
           <dl class="edu-rows">
-            <div class="edu-row">
-              <dt><span class="ko">학위</span></dt>
-              <dd><span class="ko">Bachelor of Engineering (B.E.)</span></dd>
-            </div>
-            <div class="edu-row">
-              <dt><span class="ko">전공</span></dt>
-              <dd><span class="ko">에너지시스템공학부 발전기계전공</span></dd>
-            </div>
             <div class="edu-row">
               <dt>GPA</dt>
               <dd><strong>4.1 / 4.5</strong></dd>
@@ -329,28 +321,38 @@
             <div>
               <h3 class="card__title"><span class="ko">Activation Steering을 활용한 LLM 개인화 및 성능 평가 연구</span></h3>
             </div>
-            <span class="card__date"><span class="ko">2026. 9 - 현재</span></span>
+            <span class="card__date"><span class="ko">2026. 9 - 2026. 11</span></span>
           </div>
           <p class="card__desc">
 
-            <span class="ko"><a href="https://arxiv.org/pdf/2404.16019">PRISM</a> 데이터셋의 평점 및 설문 데이터를 활용하여 Activation Steering을 통한 LLM 개인화 연구를 진행중. LLM-as-a-Judge, Jev 등과 같은 의사결정 모델을 통한 평가 등을 수행하고 있음.</span>
+            <span class="ko"><a href="https://arxiv.org/pdf/2404.16019">PRISM</a> 데이터셋(1,500명)을 활용해 <strong>Qwen3-4B</strong>와 <strong>Llama-3.1-8B-Instruct</strong>에서 추가 학습 없는 Activation Steering 기반 LLM 개인화를 검증하고, Jev(Perplexity Decider) 및 임베딩 지표로 평가함. 설문 기반 steering은 품질을 유지하며 밝힌 선호 속성을 안정적으로 제어했으나(<strong>일치율 0.61</strong>), 원인 진단을 통해 고정 개인 벡터만으로는 데이터 내 개인 신호 부족으로 실제 선호 개인화에 한계가 있음을 규명함.</span>
           </p>
           <div class="card__meta">
             <span class="tech-stack" aria-label="기술 스택">
               <img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white" alt="Python" loading="lazy">
               <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&amp;logoColor=white" alt="PyTorch" loading="lazy">
-              <span class="model-badge" aria-label="Hugging Face, Qwen3 0.6B">
+              <span class="model-badge" aria-label="Hugging Face, Qwen3 4B">
                 <span class="model-badge__label">
                   <img src="https://cdn.simpleicons.org/huggingface/FFFFFF" alt="" aria-hidden="true" loading="lazy">
                   HuggingFace
                 </span>
                 <span class="model-badge__model">
                   <img src="https://cdn.simpleicons.org/qwen/FFFFFF" alt="" aria-hidden="true" loading="lazy">
-                  Qwen3 0.6B
+                  Qwen3 4B
+                </span>
+              </span>
+              <span class="model-badge" aria-label="Hugging Face, Meta, Llama 3.1 8B">
+                <span class="model-badge__label">
+                  <img src="https://cdn.simpleicons.org/huggingface/FFFFFF" alt="" aria-hidden="true" loading="lazy">
+                  HuggingFace
+                </span>
+                <span class="model-badge__model">
+                  <img src="https://cdn.simpleicons.org/meta/FFFFFF" alt="" aria-hidden="true" loading="lazy">
+                  Llama 3.1 8B
                 </span>
               </span>
               <img src="https://img.shields.io/badge/OpenRouter-6467F2?logo=openrouter&amp;logoColor=white" alt="OpenRouter" loading="lazy">
-              <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&amp;logoColor=black" alt="Google Colab" loading="lazy">
+              <img src="https://img.shields.io/badge/Perplexity%20Jev-1FB8CD?logo=perplexity&amp;logoColor=white" alt="Perplexity Jev" loading="lazy">
             </span>
           </div>
         </article>
